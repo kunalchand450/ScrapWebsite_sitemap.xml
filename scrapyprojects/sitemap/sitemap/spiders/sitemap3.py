@@ -6,8 +6,8 @@ from scrapy.spiders import SitemapSpider
 class MultiSpider(SitemapSpider):
     name = "xy1"
     
-    sitemap_urls = ["https://discoverwebtech.com/sitemap_index.xml"]
-    start_urls = []
+    sitemap_urls = ["https://www.pwengraving.com/sitemap.xml"]
+    
     
     # print(f'Scraping the following urls {start_urls}')
 
