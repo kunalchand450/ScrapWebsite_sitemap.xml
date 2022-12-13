@@ -4,12 +4,10 @@ import tempfile
 import scrapy
 import pandas
 from bs4 import BeautifulSoup
-# soup = BeautifulSoup('html.parser')
 from json.decoder import JSONDecodeError
 import datetime
 from datetime import datetime
 from lxml import etree
-# import xml.etree.ElementTree as ET
 from datetime import datetime
 from scrapy.spiders import SitemapSpider
 class MultiSpider(SitemapSpider):
