@@ -16,8 +16,8 @@ class MultiSpider(SitemapSpider):
     #     'LOG_LEVEL': 'CRITICAL',
     # }
     
-    # sitemap_urls = ["https://discoverwebtech.com/sitemap_index.xml"]
-    sitemap_urls = ["https://www.pwengraving.com/sitemap.xml"]
+    sitemap_urls = ["https://stagum.com/sitemap_index.xml"]
+    # sitemap_urls = ["https://www.pwengraving.com/sitemap.xml"]
 
     def parse(self, response):
         component_to_xpath_dict = {"h1_tag": "//h1/span/text()",    # for pwengrave xpath is slightly change
