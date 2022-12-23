@@ -11,19 +11,22 @@ from lxml import etree
 from datetime import datetime
 from scrapy.spiders import SitemapSpider
 class MultiSpider(SitemapSpider):
-    name = "sitemap_xml"
+    name = "xy12"
     # custom_settings = {
     #     'LOG_LEVEL': 'CRITICAL',
     # }
     
-    sitemap_urls = ["https://stagum.com/sitemap_index.xml"]
+    # sitemap_urls = ["https://stagum.com/sitemap_index.xml"]
     # sitemap_urls = ["https://www.pwengraving.com/sitemap.xml"]
+    sitemap_urls = ["https://www.thefocaltherapyclinic.co.uk/sitemap_index.xml"] 
 
     def parse(self, response):
-        component_to_xpath_dict = {"h1_tag": "//h1/span/text()",    # for pwengrave xpath is slightly change
+        component_to_xpath_dict = {"h1_tag_wordpress": "//h1/text()",
+                                    "h1_tag_magento": "//h1/span/text()",
                                    "title": "//title/text()",
                                    "meta_description": "//meta[@name='description']/@content",
-                                   "image_data": "//img",
+                                   "meta_keyword": '//meta[@name="keywords"]/@content',
+                                   "image_data": "//img"
         }
         result_json={}
         result_json['url']=response.url
