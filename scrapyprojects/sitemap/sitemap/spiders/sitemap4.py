@@ -22,7 +22,7 @@ class MultiSpider(SitemapSpider):
 
     def parse(self, response):
         component_to_xpath_dict = {"h1_tag_wordpress": "//h1/text()",
-                                    "h1_tag_magento": "//h1/span/text()",
+                                    "h1_tag_in_span": "//h1/span/text()",
                                    "title": "//title/text()",
                                    "meta_description": "//meta[@name='description']/@content",
                                    "meta_keyword": '//meta[@name="keywords"]/@content',
